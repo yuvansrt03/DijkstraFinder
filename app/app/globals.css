@@ -16,5 +16,5 @@
   }
 }
 .grid-cols-100 {
-  grid-template-columns: repeat(100, minmax(0, 1fr));
+  grid-template-columns: repeat(50, minmax(0, 1fr));
 }
