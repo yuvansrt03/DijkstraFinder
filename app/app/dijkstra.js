@@ -68,16 +68,16 @@ class Graph {
 }
 export const dijkstra = async (excluded, start, end, setError) => {
   return new Promise((resolve, reject) => {
-    const dist = new Array(2500 + 1).fill(Infinity);
-    const parent = new Array(2500 + 1).fill(null);
+    const dist = new Array(4000 + 1).fill(Infinity);
+    const parent = new Array(4000 + 1).fill(null);
     const myGraph = new Graph();
 
-    for (let i = 1; i <= 2500; i++) myGraph.addVertex(i);
-    for (let i = 1; i <= 2500; i++) {
-      myGraph.addEdge(i, i - 50, 1);
-      if ((i - 1) % 50 != 0) myGraph.addEdge(i, i - 1, 1);
-      myGraph.addEdge(i, i + 50, 1);
-      if (i % 50 != 0) myGraph.addEdge(i, i + 1, 1);
+    for (let i = 1; i <= 4000; i++) myGraph.addVertex(i);
+    for (let i = 1; i <= 4000; i++) {
+      myGraph.addEdge(i, i - 100, 1);
+      if ((i - 1) % 100 != 0) myGraph.addEdge(i, i - 1, 1);
+      myGraph.addEdge(i, i + 100, 1);
+      if (i % 100 != 0) myGraph.addEdge(i, i + 1, 1);
     }
     excluded.forEach((item) => {
       myGraph.removeVertex(item);

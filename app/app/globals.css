@@ -15,6 +15,21 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+body {
+  background: rgb(0, 75, 121);
+  background: linear-gradient(
+    172deg,
+    rgba(0, 75, 121, 1) 0%,
+    rgba(0, 19, 42, 1) 100%
+  );
+  color: white;
+  font-size: 1.125rem;
+}
 .grid-cols-100 {
-  grid-template-columns: repeat(50, minmax(0, 1fr));
+  grid-template-columns: repeat(100, minmax(0, 1fr));
+}
+@media (max-width: 425px) {
+  body {
+    font-size: 0.75rem;
+  }
 }
